@@ -5,7 +5,7 @@
 
 big_data = {}
 big_data['host'] = '47.95.140.2'
-big_data['port'] = '3306'
+big_data['port'] = 3306
 big_data['user'] = 'root'
 big_data['passwd'] = 'jxd200599'
 big_data['db'] = 'wangzhe'
@@ -16,7 +16,7 @@ big_data['db'] = 'wangzhe'
 """
 local_data = {}
 local_data['host'] = '127.0.0.1'
-local_data['port'] = '3306'
+local_data['port'] = 3306
 local_data['user'] = 'root'
 local_data['passwd'] = 'root1234'
 local_data['db'] = 'wangzhe'

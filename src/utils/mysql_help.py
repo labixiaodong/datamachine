@@ -1,5 +1,5 @@
-from utils.db_pools import getDBonnectionPools
-import pandas as pd 
+from utils.db_pools import DBConnPools
+import pandas as pd
 from config import config
 import pymysql
 import os
@@ -12,6 +12,7 @@ port = DB["port"]
 user = DB["user"]
 passwd = DB["passwd"]
 db = DB["db"]
+
 
 class MysqlHelper(object):
 
@@ -29,7 +30,7 @@ class MysqlHelper(object):
         self.cursor = None
 
         if self.pools:
-            self.dbinstance = getDBonnectionPools()
+            self.dbinstance = DBConnPools()
 
     def insertdata_bydf(self, df, tb, if_exists='append', n=5):
 
@@ -64,7 +65,9 @@ class MysqlHelper(object):
                 print("数据库insert成功")
 
                 endTime = time.time()
-                time_eclipse = round((endTime - startTime), 2)
+                time_eclipse = round((endTime - start_time), 2)
+
+                print("插入数据耗时{0}".format(time_eclipse))
 
                 count_times = n
 
@@ -81,13 +84,9 @@ class MysqlHelper(object):
                     print('insertmany_bydf error execute:')
                     raise Exception("数据插入失败")
 
-
-
-
-
     def getconn(self):
         if self.pools:
-            conn = self.dbinstance.getconn(self.host, self.port, self.user, self.passwd, self.db, self.charset)
+            conn = self.dbinstance.get_conn(self.host, self.port, self.user, self.passwd, self.db, self.charset)
         else:
             conn = pymysql.connect(
                 host=self.host,
@@ -100,6 +99,16 @@ class MysqlHelper(object):
             )
             print("\n数据库连接成功")
         return conn
+
+    def close(self, conn, cursor=None):
+        try:
+            if cursor is not None:
+                cursor.close()
+            conn.close()
+            if not self.pools:
+                print("数据库连接关闭")
+        except:
+            pass
 
 
 
