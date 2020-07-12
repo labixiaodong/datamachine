@@ -110,5 +110,45 @@ class MysqlHelper(object):
         except:
             pass
 
+    def sql_clean(self, sql):
+
+        sql = re.sub("\,\s*\)", ")", sql)
+        sql = re.sub("\.0,", ",", sql)
+
+        sql = sql.replace(", nan", "").replace("nan, ", "").replace("None, ", "").replace(", None", "")
+
+        return sql
+
+    def __get_df(self, sql, index=0, toprint=None, connect_once=True):
+        sql = self.sql_clean(sql)
+
+        try:
+            if self.conn.open == False:
+                self.conn = self.getconn()
+        except:
+            self.conn = self.getconn()
+        try:
+            self.cursor = self.conn.cursor()
+            set_sql = "SET SESSION group_concat_max_len = 102400;"
+            rows = self.cursor.execute(set_sql)
+            df = pd.read_sql(sql, self.conn)
+            if not connect_once:
+                self.close(self.conn, self.cursor)
+        except Exception as e:
+            print("连接异常")
+
+        return df
+
+    def get_df(self, *args, toprint=None, connect_once=True):
+        dfs = []
+
+        for i, sql in enumerate(args):
+            df = self.__get_df(sql, index=i, toprint=toprint, connect_once=connect_once)
+            dfs.append(df)
+        if connect_once:
+            self.close(self.conn, self.cursor)
+
+        return dfs if len(dfs) > 1 else dfs[0]
+
 
 
