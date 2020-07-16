@@ -4,6 +4,7 @@ from config import config
 import pymysql
 import os
 import time
+import re
 
 
 DB = config.big_data
