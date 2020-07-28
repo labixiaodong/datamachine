@@ -55,3 +55,5 @@ DB_MAX_USAGE = 3
 
 # setsession : 一个可选的SQL命令列表用于准备每个会话，如["set datestyle to german", ...]
 DB_SET_SESSION = None
+
+

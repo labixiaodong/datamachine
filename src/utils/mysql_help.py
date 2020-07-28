@@ -6,6 +6,9 @@ import os
 import time
 import re
 
+from utils.mysql_error import get_sql_error
+from config import dingding_config
+
 
 DB = config.big_data
 host = DB["host"]
@@ -120,6 +123,7 @@ class MysqlHelper(object):
 
         return sql
 
+    @get_sql_error(dingding_config.ding_first)
     def __get_df(self, sql, index=0, toprint=None, connect_once=True):
         sql = self.sql_clean(sql)
 

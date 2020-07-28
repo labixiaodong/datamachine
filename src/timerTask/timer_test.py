@@ -19,7 +19,7 @@ def data_get():
     """
 
     sql_2 = """
-            select name, hp_growth from heros
+            select name, hp_growth frm heros
             order by hp_growth desc limit 5
         """
 
@@ -29,17 +29,7 @@ def data_get():
     print(df2)
 
 
-def test():
-    test_list = ['a', 'b', 'c']
-    x, y, z = test_list
-    print(x)
-    print('*'*20)
-    print(y)
-    print('*' * 20)
-    print(z)
-
-
 if __name__ == '__main__':
-    test()
+    data_get()
 
 

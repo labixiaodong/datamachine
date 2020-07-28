@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38c80291-93f4-4ae0-b8ef-205914a4434a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/dingding_robot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config/dingding_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/timerTask/1_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/mysql_error.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/string_help.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/timerTask/timer_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/timerTask/timer_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/dingding_robot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/dingding_robot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/mysql_help.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mysql_help.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +61,28 @@
       <recent name="D:\project\datamachine\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.dingding_robot">
+  <component name="RunManager" selected="Python.timer_test">
+    <configuration name="1_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="datamachine" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/timerTask" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/timerTask/1_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="db_pools" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="datamachine" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -124,11 +152,13 @@
       <item itemvalue="Python.db_pools" />
       <item itemvalue="Python.timer_test" />
       <item itemvalue="Python.dingding_robot" />
+      <item itemvalue="Python.1_test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.dingding_robot" />
         <item itemvalue="Python.timer_test" />
+        <item itemvalue="Python.1_test" />
+        <item itemvalue="Python.dingding_robot" />
         <item itemvalue="Python.db_pools" />
       </list>
     </recent_temporary>
@@ -173,22 +203,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="504" y="116" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1592375899630" />
-    <state width="1345" height="174" key="GridCell.Tab.0.bottom" timestamp="1594972506166">
+    <state width="1345" height="312" key="GridCell.Tab.0.bottom" timestamp="1595930371148">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594972506166" />
-    <state width="1345" height="174" key="GridCell.Tab.0.center" timestamp="1594972506166">
+    <state width="1345" height="312" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595930371148" />
+    <state width="1345" height="312" key="GridCell.Tab.0.center" timestamp="1595930371147">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594972506166" />
-    <state width="1345" height="174" key="GridCell.Tab.0.left" timestamp="1594972506166">
+    <state width="1345" height="312" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595930371147" />
+    <state width="1345" height="312" key="GridCell.Tab.0.left" timestamp="1595930371147">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594972506166" />
-    <state width="1345" height="174" key="GridCell.Tab.0.right" timestamp="1594972506166">
+    <state width="1345" height="312" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595930371147" />
+    <state width="1345" height="312" key="GridCell.Tab.0.right" timestamp="1595930371147">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594972506166" />
+    <state width="1345" height="312" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595930371147" />
+    <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1595927777414">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595927777414" />
+    <state width="1345" height="223" key="GridCell.Tab.1.center" timestamp="1595927777414">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1595927777414" />
+    <state width="1345" height="223" key="GridCell.Tab.1.left" timestamp="1595927777413">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1595927777413" />
+    <state width="1345" height="223" key="GridCell.Tab.1.right" timestamp="1595927777414">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1595927777414" />
     <state x="184" y="12" key="SettingsEditor" timestamp="1594887091729">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
