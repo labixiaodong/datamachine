@@ -12,7 +12,7 @@ bcrypt==3.1.6
 beautifulsoup4==4.7.1
 billiard==3.5.0.5
 black==19.3b0
-bleach==3.1.0
+bleach==3.3.0
 blinker==1.4
 Bootstrap-Flask==1.0.9
 boto==2.49.0
