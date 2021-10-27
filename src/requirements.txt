@@ -31,7 +31,7 @@ constantly==15.1.0
 crypto==1.4.1
 cryptography==2.4.2
 cycler==0.10.0
-dask==1.1.2
+dask==2021.10.0
 datashape==0.5.2
 dateutils==0.6.6
 DBUtils==1.3
